@@ -245,7 +245,9 @@
             text-align: center;
             position: relative;
             z-index: 2;
-            padding: 0 30px;
+            /* Adjusted padding to push content down and prevent it from being hidden */
+            padding-top: 100px; 
+            padding-bottom: 30px;
         }
 
         .hero-content {
@@ -425,12 +427,11 @@
             position: relative;
             overflow: hidden;
         }
-        
-        /* New Haphazard Grid Layout */
+
         .gallery-collage-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased minmax for larger images */
-            grid-auto-rows: 300px; /* New fixed row height for uniform look */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-auto-rows: 300px;
             gap: 20px;
             max-width: 1400px;
             margin: 0 auto;
@@ -491,14 +492,6 @@
         .gallery-item:hover .overlay {
             opacity: 1;
         }
-        
-        /* Set specific grid spans for a perfect rectangle collage */
-        .gallery-item:nth-child(1) { grid-row: span 2; }
-        .gallery-item:nth-child(2) { grid-column: span 2; }
-        .gallery-item:nth-child(3) { grid-column: span 1; grid-row: span 1; }
-        .gallery-item:nth-child(4) { grid-column: span 1; grid-row: span 2; }
-        .gallery-item:nth-child(5) { grid-column: span 2; grid-row: span 3; }
-        .gallery-item:nth-child(6) { grid-column: span 1; grid-row: span 2; }
         
         @keyframes shimmer {
             0% { left: -100%; }
@@ -711,7 +704,7 @@
             font-size: 24px;
             color: var(--dark-bg);
         }
-
+        
         /* Footer */
         .footer {
             background: rgba(0, 0, 0, 0.8);
@@ -731,7 +724,9 @@
             }
 
             .hero {
-                padding: 0 20px;
+                /* Adjusted padding for smaller screens */
+                padding-top: 80px; 
+                padding-bottom: 20px;
             }
 
             .section {
@@ -945,7 +940,7 @@
                 </a>
                 <a href="#ar-integrated-poster" class="project-card" id="ar-integrated-poster">
                     <div class="project-image">
-                        <img src="ar_poster_project.jpg" alt="AR Integrated Poster Project">
+                        <img src="ar_poster_project.pdf" alt="AR Integrated Poster Project">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">AR-Integrated Poster Series</h3>
@@ -1014,7 +1009,7 @@
                     <p style="color: var(--text-secondary);">Dankuni, Hooghly<br>PIN-712311</p>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon" style="background: var(--primary-neon);">📸</div>
+                    <div class="contact-icon">📸</div>
                     <h4 style="color: var(--primary-neon); font-weight: 600; margin-bottom: 10px;">Instagram</h4>
                     <p><a href="https://www.instagram.com/_debanjan_mondal2005_" target="_blank" style="color: var(--text-secondary); text-decoration: none;">your-instagram-handle</a></p>
                 </div>
